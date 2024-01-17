@@ -1,0 +1,51 @@
+{
+    "contactData": [
+      {
+        "email": "john@deo.com",
+        "phone": "+18887324197",
+        "firstName": "John",
+        "lastName": "Deo",
+        "name": "John Deo",
+        "dateOfBirth": "1990-09-25",
+        "address1": "3535 1st St N",
+        "city": "Dolomite",
+        "state": "AL",
+        "country": "US",
+        "postalCode": "35061",
+        "companyName": "DGS VolMAX",
+        "website": "35061",
+        "tags": [
+          "aute consequat ad ea",
+          "dolor sed"
+        ],
+        "source": "public api",
+        "customField": {
+          "__custom_field_id__": "exercitation"
+        }
+      },
+      {
+        "email": "javed15khan@gmail.com",
+        "phone": "7878788878",
+        "firstName": "javed",
+        "lastName": "khan",
+        "name": "javed khan",
+        "dateOfBirth": "1990-09-25",
+        "address1": "pared ground",
+        "city": "hyderabad",
+        "state": "telangana",
+        "country": "india",
+        "postalCode": "500087",
+        "companyName": "DGS TYVolMAX",
+        "website": "350610976",
+        "tags": [
+          "aute consequat ad ea",
+          "dolor sed"
+        ],
+        "source": "public apiiii",
+        "customField": {
+          "__custom_field_id__": "exercitation"
+        }
+      }
+    ]
+  }
+  

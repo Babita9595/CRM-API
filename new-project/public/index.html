@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/index.css">
+   
+</head>
+
+<body>
+
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="fa-solid fa-car"></span>
+                <img src="../public/images/navlogo.png" alt="Your Logo" height="30" class="d-inline-block align-top">
+             CRM 
+            </a>
+           <div>
+            <a class="navbar-brand" href="#">Contact Us -<span>91 #########</span></a>
+         <a href="pipelined.html"><button style="background-color:#ff6a4b;" class="btn " >Go to PipeLine</button></a>
+            <button class="btn btn-dark" onclick="toggleAllData()">Show Alldata</button>
+           </div>
+            <!-- Add navigation links as needed -->
+        </div>
+    </nav>
+
+   
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div style="margin-top: 10%;" class="col-md-4">
+                    <h1>Experience the Future of Business</h1>
+                    <p>Discover our latest models and cutting-edge technology.</p>
+                    <!-- <a href="#" class="btn btn-primary">Explore Models</a> -->
+                    <button onclick="fetchContactAppointments()" class="btn btn-dark">Get Contact By Id</button>
+                    <button onclick="toggleForm()" class="btn btn-primary">Open Form</button>
+                </div>
+                <div class="col-md-8">
+                    <img width="800" src="../public/images/think-act.png" alt="Hyundai Car Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section ">
+        <h2 >Request a Test Drive</h2>
+        <div class="container ml-4 col-md-6">
+
+            <form id="testDriveForm">
+                <input type="hidden" id="contactId" value="">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Enter first name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div> -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dateOfBirth">
+                </div>
+                <div class="mb-3">
+                    <label for="address1" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address1" placeholder="Enter your address">
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="Enter your state">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="country" placeholder="Enter your country">
+                </div>
+                <div class="mb-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="Enter your postal code">
+                </div>
+                <div class="mb-3">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+                </div>
+                <div class="mb-3">
+                    <label for="website" class="form-label">Website</label>
+                    <input type="text" class="form-control" id="website" placeholder="Enter your website">
+                </div>
+                <div class="mb-3">
+                    <label for="tags" class="form-label">Tags (comma-separated)</label>
+                    <input type="text" class="form-control" id="tags" placeholder="Enter tags">
+                </div>
+                <div class="mb-3">
+                    <label for="source" class="form-label">Source</label>
+                    <input type="text" class="form-control" id="source" placeholder="Enter the source">
+                </div>
+                <div class="mb-3">
+                    <label for="customField" class="form-label">Custom Field</label>
+                    <input type="text" class="form-control" id="customField" placeholder="Enter custom field">
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    
+        </div>
+
+       
+    </section>
+
+
+    <div id="contactData" class="exploredata mt-4">
+        <!-- Contact data table will be displayed here -->
+    </div>
+
+
+    <div id="searchInputField" style="display: none;" class="mt-2 mb-2">
+        <input onchange="handleserachcontact()" type="email" class="form-control w-25 " id="searchbyemail" placeholder="search by email">
+    </div>
+<hr/>
+    <div id="AllcontactData"  style="display: none;" class=" mt-4">
+        <!-- <input type="text" class="form-control w-25 " id="searchbyemail" placeholder="search by email">  -->
+        
+     
+    </div>
+
+    <!-- <div id="showAlldata" class="allData" class="mt-4">
+        
+        
+    </div> -->
+
+
+    <footer class="bg-dark text-light mt-5">
+        <div class="container text-center">
+            <p>&copy; 2023 Hyundai. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+   
+    <script src="../src/index.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

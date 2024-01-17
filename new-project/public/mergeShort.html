@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Visualization</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Optional: Bootstrap JS (if needed) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Merge Sort Visualization</h1>
+
+    <form id="arrayForm">
+        <div class="form-group">
+            <label for="numberArray">Numbers:</label>
+            <input type="text" class="form-control" id="numberArray" placeholder="Enter numbers separated by commas" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="processArray()">Submit</button>
+    </form>
+
+    <div class="mt-3" id="arrayOutput">
+        <!-- Merge sort steps will be added dynamically here -->
+    </div>
+</div>
+
+<script>
+    function processArray() {
+        const inputField = document.getElementById('numberArray');
+        const inputArray = inputField.value.split(',').map(Number);
+
+        const arrayOutput = document.getElementById('arrayOutput');
+        arrayOutput.innerHTML = '';  // Clear previous content
+
+        const steps = [
+            // Replace this array with your actual steps from the JSON data
+        ];
+
+        // Display each step dynamically
+        steps.forEach(function (step) {
+            arrayOutput.innerHTML += '<h2>Step ' + step.stepNumber + ': ' + step.action + '</h2>';
+            arrayOutput.innerHTML += '<p>Left Array: [' + step.leftArray.join(', ') + ']</p>';
+            arrayOutput.innerHTML += '<p>Right Array: [' + step.rightArray.join(', ') + ']</p>';
+            if (step.mergedArray) {
+                arrayOutput.innerHTML += '<p>Merged Array: [' + step.mergedArray.join(', ') + ']</p>';
+            }
+            arrayOutput.innerHTML += '<hr>';
+        });
+    }
+</script>
+
+</body>
+</html>

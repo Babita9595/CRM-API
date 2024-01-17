@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch and Display URL Example</title>
+</head>
+<body>
+
+    <form id="urlForm">
+        <label for="urlInput">URL:</label>
+        <input type="text" id="urlInput" readonly>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="displayUrl"></p>
+
+    <script>
+        // Get the input field and display element
+        var urlInput = document.getElementById('urlInput');
+        var displayUrl = document.getElementById('displayUrl');
+
+        // Fetch the current URL and set it as the input field value
+        urlInput.value = window.location.href;
+
+        // Add a submit event listener to the form
+        document.getElementById('urlForm').addEventListener('submit', function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Display the submitted URL below the form
+            var submittedUrl = urlInput.value;
+            displayUrl.textContent = 'Submitted URL: ' + submittedUrl;
+        });
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,16 @@
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.form-section {
+    display: none;
+}
+
+.exploredata{
+    display: none;
+}
+
+.allData{
+    display: none;   
+}
